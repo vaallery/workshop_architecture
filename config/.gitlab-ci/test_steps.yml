@@ -1,0 +1,7 @@
+---
+rspec:
+  stage: test
+  coverage: /\(\d+.\d+\%\) covered/
+  script:
+    - export RAILS_ENV=test
+    - bundle exec rspec

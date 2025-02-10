@@ -1,0 +1,35 @@
+items:
+  - slug: be
+    name: белоросусский
+  - slug: bg
+    name: болгарский
+  - slug: cs
+    name: чешский
+  - slug: de
+    name: немцкий
+  - slug: empty
+    name: неизвестный
+  - slug: en
+    name: английский
+  - slug: eo
+    name: эсперанто
+  - slug: es
+    name: испанский
+  - slug: fr
+    name: французский
+  - slug: hu
+    name: венгерский
+  - slug: it
+    name: итальянский
+  - slug: lv
+    name: латышский
+  - slug: nl
+    name: голландский
+  - slug: other
+    name: другой
+  - slug: pl
+    name: польский
+  - slug: ru
+    name: русский
+  - slug: uk
+    name: украинский

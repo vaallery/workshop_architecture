@@ -1,0 +1,3 @@
+= semantic_form_for :download_form, url: { action: :download }, html: { multipart: true } do |f|
+  = f.actions
+    = f.button admin_i18n_t('buttons.download')

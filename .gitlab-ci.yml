@@ -1,0 +1,8 @@
+---
+include:
+  - local: 'config/.gitlab-ci/analyse_steps.yml'
+  - local: 'config/.gitlab-ci/test_steps.yml'
+
+stages:
+  - analyze
+  - test

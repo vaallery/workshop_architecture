@@ -1,0 +1,116 @@
+@startuml
+
+[ ] -down-> Extract
+Extract -down-> Select
+
+Extract : Извлечение содержимого
+Extract : inpx-файла
+
+Select -down-> Chunks
+
+Select : Отбор inp-файлов
+
+Chunks -down-> Folders1
+Chunks -down-> Folders2
+Chunks -down-> FoldersN
+
+Chunks : Распределение inp-файлов
+Chunks : по процессам
+
+Folders1 : Параллельное
+Folders1 : извлечение папок
+
+Folders2 : ...
+
+FoldersN : Параллельное
+FoldersN : извлечение папок
+
+Folders1 -down-> ImportFolders
+Folders2 -down-> ImportFolders
+FoldersN -down-> ImportFolders
+
+ImportFolders : Сохранение папок
+ImportFolders : в PostgreSQL
+
+ImportFolders -down-> Books1
+ImportFolders -down-> Books2
+ImportFolders -down-> BooksN
+
+Books1 : Параллельное
+Books1 : сохранение книг
+
+Books2 : ...
+
+BooksN : Параллельное
+BooksN : сохранение книг
+
+Books1 -down-> BooksCount
+Books2 -down-> BooksCount
+BooksN -down-> BooksCount
+
+BooksCount : Количество сохраненных книг
+
+BooksCount -down-> Authors1
+BooksCount -down-> Authors2
+BooksCount -down-> AuthorsN
+
+Authors1 : Параллельное
+Authors1 : извлечение авторов
+
+Authors2 : ...
+
+AuthorsN : Параллельное
+AuthorsN : извлечение авторов
+
+Authors1 -down-> ImportAuthors
+Authors2 -down-> ImportAuthors
+AuthorsN -down-> ImportAuthors
+
+ImportAuthors : Сохранение авторов
+ImportAuthors : в PostgreSQL
+
+ImportAuthors -down-> Keywords1
+ImportAuthors -down-> Keywords2
+ImportAuthors -down-> KeywordsN
+
+Keywords1 : Параллельное извлечение
+Keywords1 : ключевых слов
+
+Keywords2 : ...
+
+KeywordsN : Параллельное извлечение
+KeywordsN : ключевых слов
+
+Keywords1 -down-> ImportKeywords
+Keywords2 -down-> ImportKeywords
+KeywordsN -down-> ImportKeywords
+
+ImportKeywords : Сохранение ключевых
+ImportKeywords : слов в PostgreSQL
+
+ImportKeywords -down-> Links1
+ImportKeywords -down-> Links2
+ImportKeywords -down-> LinksN
+
+Links1 : Параллельное
+Links1 : сохранение ссылок
+
+Links2 : ...
+
+LinksN : Параллельное
+LinksN : сохранение ссылок
+
+Links1 -down-> Counts
+Links2 -down-> Counts
+LinksN -down-> Counts
+
+Counts : Пересчет счетчиков
+
+Counts -down-> Destroy
+
+Destroy : Удаление извлеченного
+Destroy : содержимого inpx-файла
+
+Destroy -down-> [*]
+
+@enduml

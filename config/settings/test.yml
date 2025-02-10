@@ -1,0 +1,2 @@
+app:
+  archives_folder: <%= ENV.fetch('ARCHIVES_FOLDER') { 'spec/fixtures/' } %>

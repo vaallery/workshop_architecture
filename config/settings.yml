@@ -1,0 +1,6 @@
+app:
+  items_per_page: 20
+  extract_folder: <%= ENV.fetch('EXTRACT_FOLDER') { 'tmp/book_extracts/' } %>
+  archives_folder: <%= ENV.fetch('ARCHIVES_FOLDER') { 'db/data/' } %>
+  sql_dump_path: <%= ENV.fetch('SQL_DUMP_PATH') { 'db/data/development.sql' } %>
+  index_concurrent_processes: <%= ENV.fetch('INDEX_CONCURRENT_PROCESSES') { Parallel.processor_count } %>

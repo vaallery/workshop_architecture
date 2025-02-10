@@ -1,0 +1,37 @@
+---
+.backend: &backend
+  stage: analyze
+  before_script:
+    - bundle install
+
+rubocop:
+  <<: *backend
+  script:
+    - bundle exec rubocop
+
+fasterer:
+  <<: *backend
+  script:
+    - bundle exec fasterer
+
+bundle-audit:
+  <<: *backend
+  allow_failure: true
+  script:
+    - bundle audit check --update
+
+misspell:
+  <<: *backend
+  tags:
+    - ubuntu
+  script:
+    - curl -L -o ./install-misspell.sh https://git.io/misspell
+    - sh ./install-misspell.sh
+    - find . -type f -name '*.rb' | xargs bin/misspell -error
+
+database_consistency:
+  <<: *backend
+  allow_failure: true
+  script:
+    - RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load
+    - RAILS_ENV=test bundle exec database_consistency

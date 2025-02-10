@@ -1,0 +1,505 @@
+items:
+  - name: Деловая литература
+    genres_attributes:
+      - name: Деловая литература
+        slug: economics_ref
+      - name: Карьера, кадры
+        slug: popular_business
+      - name: Маркетинг, PR
+        slug: org_behavior
+      - name: Финансы
+        slug: banking
+      - name: Экономика
+        slug: economics
+  - name: Детективы и Триллеры
+    genres_attributes:
+      - name: Боевик
+        slug: det_action
+      - name: Детективы
+        slug: detective
+      - name: Иронический детектив, дамский детективный роман
+        slug: det_irony
+      - name: Исторический детектив
+        slug: det_history
+      - name: Классический детектив
+        slug: det_classic
+      - name: Криминальный детектив
+        slug: det_crime
+      - name: Крутой детектив
+        slug: det_hard
+      - name: Политический детектив
+        slug: det_political
+      - name: Полицейский детектив
+        slug: det_police
+      - name: Про маньяков
+        slug: det_maniac
+      - name: Советский детектив
+        slug: det_su
+      - name: Триллер
+        slug: thriller
+      - name: Шпионский детектив
+        slug: det_espionage
+  - name: Документальная литература
+    genres_attributes:
+      - name: Биографии и Мемуары
+        slug: nonf_biography
+      - name: Военная документалистика и аналитика
+        slug: nonf_military
+      - name: Военное дело
+        slug: military_special
+      - name: География, путевые заметки
+        slug: travel_notes
+      - name: Документальная литература
+        slug: nonfiction
+      - name: Публицистика
+        slug: nonf_publicism
+  - name: Дом и семья
+    genres_attributes:
+      - name: Автомобили и ПДД
+        slug: auto_regulations
+      - name: Боевые искусства, спорт
+        slug: home_sport
+      - name: Домашние животные
+        slug: home_pets
+      - name: Домоводство
+        slug: home
+      - name: Здоровье
+        slug: home_health
+      - name: Коллекционирование
+        slug: home_collecting
+      - name: Кулинария
+        slug: home_cooking
+      - name: Педагогика, воспитание детей, литература для родителей
+        slug: sci_pedagogy
+      - name: Развлечения
+        slug: home_entertain
+      - name: Сад и огород
+        slug: home_garden
+      - name: Сделай сам
+        slug: home_diy
+      - name: Семейные отношения
+        slug: family
+      - name: Семейные отношения, секс
+        slug: home_sex
+      - name: Хобби и ремесла
+        slug: home_crafts
+  - name: Драматургия
+    genres_attributes:
+      - name: Античная драма
+        slug: drama_antique
+      - name: Драма
+        slug: drama
+      - name: Драматургия
+        slug: dramaturgy
+      - name: Комедия
+        slug: comedy
+      - name: Мистерия, буффонада, водевиль
+        slug: vaudeville
+      - name: Сценарий
+        slug: screenplays
+      - name: Трагедия
+        slug: tragedy
+  - name: Искусство, Искусствоведение, Дизайн
+    genres_attributes:
+      - name: Живопись, альбомы, иллюстрированные каталоги
+        slug: painting
+      - name: Искусство и Дизайн
+        slug: design
+      - name: Искусствоведение
+        slug: art_criticism
+      - name: Кино
+        slug: cine
+      - name: Критика
+        slug: nonf_criticism
+      - name: Культурология
+        slug: sci_culture
+      - name: Мировая художественная культура
+        slug: art_world_culture
+      - name: Музыка
+        slug: music
+      - name: Партитуры
+        slug: notes
+      - name: Скульптура и архитектура
+        slug: architecture_book
+      - name: Театр
+        slug: theatre
+  - name: Компьютеры и Интернет
+    genres_attributes:
+      - name: Зарубежная компьютерная, околокомпьютерная литература
+        slug: computers
+      - name: Компьютерное 'железо' (аппаратное обеспечение), цифровая обработка сигналов
+        slug: comp_hard
+      - name: ОС и Сети, интернет
+        slug: comp_www
+      - name: Программирование, программы, базы данных
+        slug: comp_db
+      - name: Учебные пособия, самоучители
+        slug: tbg_computers
+  - name: Литература для детей
+    genres_attributes:
+      - name: Детская литература
+        slug: children
+      - name: Детская образовательная литература
+        slug: child_education
+      - name: Детская остросюжетная литература
+        slug: child_det
+      - name: Зарубежная литература для детей
+        slug: foreign_children
+      - name: Игры, упражнения для детей
+        slug: prose_game
+      - name: Классическая детская литература
+        slug: child_classical
+      - name: Проза для детей
+        slug: child_prose
+      - name: Русские сказки
+        slug: child_tale_rus
+      - name: Сказки народов мира
+        slug: child_tale
+      - name: Стихи для детей
+        slug: child_verse
+      - name: Фантастика для детей
+        slug: child_sf
+  - name: Любовные романы
+    genres_attributes:
+      - name: Исторические любовные романы
+        slug: love_history
+      - name: Короткие любовные романы
+        slug: love_short
+      - name: Любовное фэнтези, любовно-фантастические романы
+        slug: love_sf
+      - name: Любовные романы
+        slug: love
+      - name: Остросюжетные любовные романы
+        slug: love_detective
+      - name: Порно
+        slug: love_hard
+      - name: Современные любовные романы
+        slug: love_contemporary
+      - name: Эротическая литература
+        slug: love_erotica
+  - name: Наука, Образование
+    genres_attributes:
+      - name: Альтернативная медицина
+        slug: sci_medicine_alternative
+      - name: Альтернативные науки и научные теории
+        slug: sci_theories
+      - name: Астрономия и Космос
+        slug: sci_cosmos
+      - name: Биология, биофизика, биохимия
+        slug: sci_biology
+      - name: Ботаника
+        slug: sci_botany
+      - name: Ветеринария
+        slug: sci_veterinary
+      - name: Военная история
+        slug: military_history
+      - name: Востоковедение
+        slug: sci_oriental
+      - name: Геология и география
+        slug: sci_geo
+      - name: Государство и право
+        slug: sci_state
+      - name: Зарубежная образовательная литература, зарубежная прикладная, научно-популярная литература
+        slug: sci_popular
+      - name: Зоология
+        slug: sci_zoo
+      - name: История
+        slug: sci_history
+      - name: Литературоведение
+        slug: sci_philology
+      - name: Математика
+        slug: sci_math
+      - name: Медицина
+        slug: sci_medicine
+      - name: Научная литература
+        slug: science
+      - name: Обществознание, социология
+        slug: sci_social_studies
+      - name: Политика
+        slug: sci_politics
+      - name: Психология и психотерапия
+        slug: sci_psychology
+      - name: Физика
+        slug: sci_phys
+      - name: Философия
+        slug: sci_philosophy
+      - name: Химия
+        slug: sci_chem
+      - name: Экология
+        slug: sci_ecology
+      - name: Экономика
+        slug: sci_economy
+      - name: Юриспруденция
+        slug: sci_juris
+      - name: Языкознание, иностранные языки
+        slug: sci_linguistic
+  - name: Поэзия
+    genres_attributes:
+      - name: Визуальная и экспериментальная поэзия, верлибры, палиндромы
+        slug: palindromes
+      - name: Классическая зарубежная поэзия
+        slug: poetry_for_classical
+      - name: Классическая поэзия
+        slug: poetry_classical
+      - name: Классическая русская поэзия
+        slug: poetry_rus_classical
+      - name: Лирика
+        slug: lyrics
+      - name: Песенная поэзия
+        slug: song_poetry
+      - name: Поэзия
+        slug: poetry
+      - name: Поэзия Востока
+        slug: poetry_east
+      - name: Поэма, эпическая поэзия
+        slug: poem
+      - name: Современная зарубежная поэзия
+        slug: poetry_for_modern
+      - name: Современная поэзия
+        slug: poetry_modern
+      - name: Современная русская поэзия
+        slug: poetry_rus_modern
+      - name: Юмористические стихи, басни
+        slug: humor_verse
+  - name: Приключения
+    genres_attributes:
+      - name: Авантюрный роман
+        slug: adv_story
+      - name: Вестерн, про индейцев
+        slug: adv_indian
+      - name: Исторические приключения
+        slug: adv_history
+      - name: Морские приключения
+        slug: adv_maritime
+      - name: Приключения
+        slug: adventure
+      - name: Приключения в современном мире
+        slug: adv_modern
+      - name: Приключения для детей и подростков
+        slug: child_adv
+      - name: Природа и животные
+        slug: adv_animal
+      - name: Путешествия и география
+        slug: adv_geo
+      - name: Рыцарский роман
+        slug: tale_chivalry
+  - name: Проза
+    genres_attributes:
+      - name: Афоризмы, цитаты
+        slug: aphorisms
+      - name: Готический роман
+        slug: gothic_novel
+      - name: Зарубежная классическая проза
+        slug: foreign_prose
+      - name: Историческая проза
+        slug: prose_history
+      - name: Классическая проза
+        slug: prose_classic
+      - name: Классическая проза XVII-XVIII веков
+        slug: literature_18
+      - name: Классическая проза ХIX века
+        slug: literature_19
+      - name: Классическая проза ХX века
+        slug: literature_20
+      - name: Контркультура
+        slug: prose_counter
+      - name: Магический реализм
+        slug: prose_magic
+      - name: "Малые литературные формы прозы: рассказы, эссе, новеллы, феерия"
+        slug: story
+      - name: Проза
+        slug: prose
+      - name: Проза о войне
+        slug: prose_military
+      - name: Роман, повесть
+        slug: great_story
+      - name: Русская классическая проза
+        slug: prose_rus_classic
+      - name: Советская классическая проза
+        slug: prose_su_classics
+      - name: Современная русская и зарубежная проза
+        slug: prose_contemporary
+      - name: Средневековая классическая проза
+        slug: foreign_antique
+      - name: Фантасмагория, абсурдистская проза
+        slug: prose_abs
+      - name: Экспериментальная, неформатная проза
+        slug: prose_neformatny
+      - name: Эпистолярная проза
+        slug: epistolary_fiction
+  - name: Прочее
+    genres_attributes:
+      - name: Журналы, газеты
+        slug: periodic
+      - name: Комиксы
+        slug: comics
+      - name: Незавершенное
+        slug: unfinished
+      - name: Неотсортированное
+        slug: other
+      - name: Самиздат, сетевая литература
+        slug: network_literature
+      - name: Фанфик
+        slug: fanfiction
+  - name: Религия, духовность, эзотерика
+    genres_attributes:
+      - name: Астрология и хиромантия
+        slug: astrology
+      - name: Буддизм
+        slug: religion_budda
+      - name: Индуизм
+        slug: religion_hinduism
+      - name: Ислам
+        slug: religion_islam
+      - name: Иудаизм
+        slug: religion_judaism
+      - name: Католицизм
+        slug: religion_catholicism
+      - name: Православие
+        slug: religion_orthodoxy
+      - name: Протестантизм
+        slug: religion_protestantism
+      - name: Религиоведение
+        slug: sci_religion
+      - name: Религия, религиозная литература
+        slug: religion
+      - name: Самосовершенствование
+        slug: religion_self
+      - name: Христианство
+        slug: religion_christianity
+      - name: Эзотерика, эзотерическая литература
+        slug: religion_esoterics
+      - name: Язычество
+        slug: religion_paganism
+  - name: Справочная литература
+    genres_attributes:
+      - name: Путеводители, карты, атласы
+        slug: geo_guides
+      - name: Руководства
+        slug: ref_guide
+      - name: Словари
+        slug: ref_dict
+      - name: Справочная литература
+        slug: reference
+      - name: Справочники
+        slug: ref_ref
+      - name: Энциклопедии
+        slug: ref_encyc
+  - name: Старинное
+    genres_attributes:
+      - name: antique
+        slug: antique
+      - name: Античная литература
+        slug: antique_ant
+      - name: Древневосточная литература
+        slug: antique_east
+      - name: Древнерусская литература
+        slug: antique_russian
+      - name: Европейская старинная литература
+        slug: antique_european
+  - name: Техника
+    genres_attributes:
+      - name: Автодело
+        slug: auto_business
+      - name: Военное дело, военная техника и вооружение
+        slug: military_weapon
+      - name: История техники
+        slug: equ_history
+      - name: Металлургия
+        slug: sci_metal
+      - name: Радиоэлектроника
+        slug: sci_radio
+      - name: Строительство и сопромат
+        slug: sci_build
+      - name: Технические науки
+        slug: sci_tech
+      - name: Транспорт и авиация
+        slug: sci_transport
+  - name: Учебники и пособия
+    genres_attributes:
+      - name: Учебники и пособия
+        slug: sci_textbook
+      - name: Учебники и пособия ВУЗов
+        slug: tbg_higher
+      - name: Учебники и пособия для среднего и специального образования
+        slug: tbg_secondary
+      - name: Школьные учебники и пособия, рефераты, шпаргалки
+        slug: tbg_school
+  - name: Фантастика
+    genres_attributes:
+      - name: Альтернативная история
+        slug: sf_history
+      - name: Боевая фантастика
+        slug: sf_action
+      - name: Героическая фантастика
+        slug: sf_heroic
+      - name: Городское фэнтези
+        slug: sf_fantasy_city
+      - name: Детективная фантастика
+        slug: sf_detective
+      - name: Киберпанк
+        slug: sf_cyberpunk
+      - name: Космическая фантастика
+        slug: sf_space
+      - name: ЛитРПГ
+        slug: sf_litrpg
+      - name: Мистика
+        slug: sf_mystic
+      - name: Мифологическое фэнтези
+        slug: fairy_fantasy
+      - name: Научная Фантастика
+        slug: sf
+      - name: Попаданцы
+        slug: popadancy
+      - name: Постапокалипсис
+        slug: sf_postapocalyptic
+      - name: Славянское фэнтези
+        slug: russian_fantasy
+      - name: Современная сказка
+        slug: modern_tale
+      - name: Социально-психологическая фантастика
+        slug: sf_social
+      - name: Стимпанк
+        slug: sf_stimpank
+      - name: Технофэнтези
+        slug: sf_technofantasy
+      - name: Ужасы
+        slug: sf_horror
+      - name: Фантастика
+        slug: sf_etc
+      - name: Фэнтези
+        slug: sf_fantasy
+      - name: Хроноопера
+        slug: hronoopera
+      - name: Эпическая фантастика
+        slug: sf_epic
+      - name: Юмористическая фантастика
+        slug: sf_humor
+  - name: Фольклор
+    genres_attributes:
+      - name: Былины, эпопея
+        slug: epic
+      - name: Детский фольклор
+        slug: child_folklore
+      - name: Мифы. Легенды. Эпос
+        slug: antique_myths
+      - name: Народные песни
+        slug: folk_songs
+      - name: Народные сказки
+        slug: folk_tale
+      - name: Пословицы, поговорки
+        slug: proverbs
+      - name: Фольклор, загадки folklore
+        slug: folklore
+      - name: Частушки, прибаутки, потешки
+        slug: limerick
+  - name: Юмор
+    genres_attributes:
+      - name: Анекдоты
+        slug: humor_anecdote
+      - name: Сатира
+        slug: humor_satire
+      - name: Юмор
+        slug: humor
+      - name: Юмористическая проза
+        slug: humor_prose

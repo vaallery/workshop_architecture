@@ -1,0 +1,13 @@
+items:
+  - name: Деловая литература
+    genres_attributes:
+      - name: Деловая литература
+        slug: economics_ref
+      - name: Карьера, кадры
+        slug: popular_business
+      - name: Маркетинг, PR
+        slug: org_behavior
+      - name: Финансы
+        slug: banking
+      - name: Экономика
+        slug: economics

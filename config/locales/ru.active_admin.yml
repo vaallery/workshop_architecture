@@ -1,0 +1,45 @@
+---
+ru:
+  active_admin:
+    menus:
+      admin: Административная панель
+      authors: Авторы
+      keywords: Ключевые слова
+      languages: Языки
+      genres: Жанры
+      books: Книги
+    filters:
+      keyword: Ключевое слово
+      genre: Жанр
+      language: Язык
+    custom:
+      panels:
+        buttons:
+          download: Скачать
+        books:
+          columns:
+            title: Книга
+            authors: Авторы
+            language: Язык
+            filename: Файл
+            download: Скачать
+            del: Удален
+            genres: Жанры
+            keywords: Ключевые слова
+            published_at: Дата публикации
+          fields:
+            authors: Авторы
+            file: Файл
+            published_at: Дата публикации
+            genres: Жанры
+        authors:
+          title: Книги
+          columns:
+            title: Книга
+            action: Действие
+          fields:
+            authors: Авторы
+            file: Файл
+            published_at: Дата публикации
+            genres: Жанры
+            language: Язык

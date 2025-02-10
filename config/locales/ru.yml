@@ -1,0 +1,54 @@
+ru:
+  date:
+    formats:
+      default:
+        '%d.%m.%Y'
+      long:
+        '%d.%m.%Y'
+  time:
+    formats:
+      long:
+        '%d.%m.%Y %H:%M:%S'
+  activerecord:
+    attributes:
+      author:
+        first_name:  Имя
+        last_name:   Фамилия
+        middle_name: Отчество
+        original:    Имя
+        books_count: Книги
+      book:
+        title: Название
+        libid: Идентификатор файла в библиотеке
+        size: Размер файла
+        filename: Название файла
+      folder:
+        name: Название папки
+      genre_group:
+        name: Название
+      genre:
+        name: Название
+        slug: Обозначение
+        books_count: Книги
+      keyword:
+        name: Название
+        books_count: Книги
+      language:
+        name: Название языка
+        slug: Код языка
+    models:
+      author:
+        zero: авторов
+        one: автор
+        few: автора
+        many: авторов
+        other: автора
+        accusative: автора
+        genitive: автор
+        dative: автору
+    errors:
+      messages:
+        blank: обязательно для заполнения
+        too_short: слишком коротко
+      models:
+        author: Авторы

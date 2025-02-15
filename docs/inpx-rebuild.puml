@@ -1,6 +1,6 @@
 @startuml
 
-[ ] -down-> Extract
+[*] -down-> Extract
 Extract -down-> Select
 
 Extract : Извлечение содержимого

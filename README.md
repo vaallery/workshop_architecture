@@ -72,4 +72,4 @@ docker compose run web bundle exec rails db:seed
 
 В папке docs находятся PlantUML-диаграмма для rake-задачи `inpx:rebuild`. Посмотреть диаграмму можно в [online-редакторе](https://www.planttext.com/).
 
-* [docs/inpx-rebuild.md](docs/inpx-rebuild.pulm) - схема распараллеливания задач в rake-задаче `inpx:rebuild`
+* [docs/inpx-rebuild.puml](docs/inpx-rebuild.puml) - схема распараллеливания задач в rake-задаче `inpx:rebuild`

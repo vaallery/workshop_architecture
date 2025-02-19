@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '>= 8.0.1'
 gem 'puma', '>= 6.5.0'
-gem "nokogiri", ">= 1.18.3"
-
 
 # Базы данных
 gem 'pg'

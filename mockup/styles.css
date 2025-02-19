@@ -1,0 +1,246 @@
+:root {
+  font-size: 32px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.wrapper {
+  display: flex;
+}
+
+aside {
+  display: none;
+  min-height: 100%;
+  background-color: rgb(39, 56, 69);
+  color: white;
+  width: 16rem;
+  flex: 1 0 auto;
+  flex-direction: column;
+  line-height: 1.425;
+  overflow-y: auto;
+  z-index: 1000;
+}
+aside nav {
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+
+  border-radius: 0.5rem;
+
+  background-color: rgb(62, 85, 109);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+aside .bottom-menu {
+  margin: auto 0.5rem 0.5rem 0.5rem;
+  justify-content: space-around;
+  display: flex;
+}
+aside .bottom-menu object {
+  display: flex;
+}
+aside nav.selected {
+  background-color: rgb(110, 151, 194);
+}
+.logo {
+  font-size: 2rem;
+  display: flex;
+  border-bottom: 0.25rem solid #01b0f6;
+  min-height: 4rem;
+  margin: 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+main {
+  background-color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+  box-shadow: 0 0.25rem 0.5rem #aaa;
+}
+.btn {
+  height: 2rem;
+  transition: transform 0.2s ease-out;
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.3);
+}
+
+.btn-small {
+  height: 1.5rem;
+  transition: transform 0.2s ease-out;
+}
+.btn-small:hover, .btn-small:focus {
+  transform: scale(1.3);
+}
+
+.btn-menu {
+  margin: 0 1rem;
+}
+.btn-download {
+  margin: 0 1rem 0 auto;
+}
+.btn-bottom {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.search {
+  width: calc(100% - 5rem);
+  height: 2rem;
+}
+.search input {
+  width: 100%;
+  height: 2rem;
+  -webkit-appearance: textfield;
+}
+.search input:focus {
+  outline: none;
+}
+
+main section {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem 1rem 0 1rem;
+  box-shadow: 0 0.25rem 0.5rem #aaa;
+}
+
+details {
+  width: 100%;
+  padding: 0.5em 0.5em 0;
+}
+
+details summary {
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+details > summary::marker,
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+details p, details h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: 1em;
+}
+/* Mobile */
+@media (min-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+  aside {
+    display: flex;
+  }
+}
+
+.login {
+  min-height: 100%;  
+  background-color: rgb(39, 56, 69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .login-form {
+  width: 20rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login .login-form h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.login-form .field {
+  margin: 0.3rem auto;
+}
+
+.login-form .field input {
+  height: 2rem;
+  width: 16rem;
+  -webkit-appearance: textfield;
+}
+
+.login-form button {
+  background-color: #01b0f6;
+  margin: 0.5rem auto;
+  padding: 0 2em;
+
+  max-width: 100%;
+  outline: none;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  color: white;
+
+  height: 2rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  text-transform: uppercase;
+
+  box-shadow: 2px 2px 2px #aaa;
+}
+
+.login-form button:hover,
+.login-form button:focus {
+  background-color: #1484b1;
+  box-shadow:
+    2px 2px 3px #999,
+    5px 5px 5px rgba(0, 0, 0, .12);
+}
+
+.flash {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #01b0f6;
+  color: white;
+  text-shadow: 0px 1px 1px #333;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+.flash-alert {
+  background-color: red;
+}
+.flash-warning {
+  background-color: orange;
+}

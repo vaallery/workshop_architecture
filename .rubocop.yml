@@ -53,6 +53,7 @@ AllCops:
     - 'db/**/*'
     - 'bin/**/*'
     - 'vendor/bundle/**/*'
+    - 'docs/**/*'
 
 # кол-во строк в блоке it или specify
 RSpec/ExampleLength:

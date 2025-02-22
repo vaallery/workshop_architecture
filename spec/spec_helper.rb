@@ -2,6 +2,7 @@ require 'simplecov'
 SimpleCov.start 'rails' do
   add_filter '/config/'
   add_filter '/spec/'
+  add_filter '/docs/'
   add_filter '/app/jobs/'
 end
 

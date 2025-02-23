@@ -19,7 +19,7 @@ services:
       sh -c "rm -f tmp/pids/server.pid &&
              bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/app
+      - .:/rails
       - "$DOCKER_COMPOSE_ARCHIVE_FOLDER:/rails/db/data"
     networks:
       - default

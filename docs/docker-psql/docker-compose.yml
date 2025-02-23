@@ -1,0 +1,39 @@
+---
+services:
+  postgresql_master:
+    image: postgres:17
+    container_name: master
+    restart: always
+    networks:
+      - db-repl
+    volumes:
+      - ./data/master:/var/lib/postgresql/data
+      - ./master/pg_hba.conf:/var/lib/postgresql/pg_hba.conf
+      - ./master/init.sql:/docker-entrypoint-initdb.d/init.sql
+    env_file:
+      - ./.env.postgresql
+
+  postgresql_slave:
+    image: postgres:17
+    container_name: slave
+    restart: always
+    networks:
+      - db-repl
+    volumes:
+      - ./slave/.pgpass:/var/lib/postgresql/.pgpass
+      - ./slave/.pgpass:/root/.pgpass
+      - ./data/slave/:/var/lib/postgresql/data
+      - ./master/pg_hba.conf:/var/lib/postgresql/pg_hba.conf
+      - ./slave/init-slave.sh:/var/lib/postgresql/init-slave.sh
+    env_file:
+      - ./.env.postgresql
+
+networks:
+  db-repl:
+    driver: bridge
+    name: db-repl
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
+          gateway: 172.18.0.1

@@ -73,3 +73,43 @@ docker compose run web bundle exec rails db:seed
 В папке docs находятся PlantUML-диаграмма для rake-задачи `inpx:rebuild`. Посмотреть диаграмму можно в [online-редакторе](https://www.planttext.com/).
 
 * [docs/inpx-rebuild.puml](docs/inpx-rebuild.puml) - схема распараллеливания задач в rake-задаче `inpx:rebuild`
+
+# Запуск проекта в docker
+
+Запускаем проект командой
+
+```bash
+docker compose up -d
+```
+
+Создаем базу данных и прогоняем миграции
+
+```bash
+docker compose exec -it web bundle exec rails db:create db:migrate
+```
+
+(1) Далее, если есть дамп, можно воспользовать им:
+
+```bash
+docker compose exec -it web bundle exec rails db:seed
+```
+
+Если вы воспользовались существующим дампом, в нем уже имеется пользователь с логином и паролем igor@softtime.ru.
+
+(2) Или можно запустить разворачивание inpx-индекса
+
+```bash
+docker compose exec -it web bundle exec rails inpx:rebuild
+```
+
+В последнем случае в системе не будет ни одного пользвателя, поэтому придется самостоятельно создать его через rails-консоль. Запускаем консоль
+
+```bash
+docker compose exec -it web bundle exec rails c
+```
+
+И создаем пользователя с нужными вам логином и паролем:
+
+```bash
+AdminUser.create!(email: 'igor@softtime.ru', password: '...')
+```

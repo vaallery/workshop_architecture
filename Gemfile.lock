@@ -460,7 +460,6 @@ DEPENDENCIES
   factory_bot_rails
   fasterer
   ffaker
-  nokogiri (>= 1.18.3)
   parallel
   pg
   pry-byebug

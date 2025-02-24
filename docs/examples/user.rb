@@ -1,5 +1,3 @@
-require "snils/rails"
-
 module Legacy
   class User < ApplicationRecord
     class SubscriptionSettings
@@ -27,7 +25,6 @@ module Legacy
 
       attr_reader :values
 
-      # @param subscribe_lists String | Hash(Symbol, true | false)
       def initialize(subscribe_lists)
         @values =
           if subscribe_lists.blank?
@@ -90,20 +87,17 @@ module Legacy
     devise :database_authenticatable, :encryptable,
            :recoverable, :rememberable, :validatable, :trackable, :lockable
 
-    # Т.к. в легаси базе пароль хранится не по рельсовым конвенциям
-    # требуется подключить примесь
     include DeviseInterface
 
     php_deserialize :service_data
 
     enum type: {
-      employee: 8, # сотрудник Нетологии (original const - TYPE_EMPLOYEE_REAL)
-      expert: 3, # эксперт (original const - TYPE_EXPERT)
-      student: 4, # студент (original const - TYPE_STUDENT)
-      admin: 1, # админ (original const - TYPE_EMPLOYEE)
+      employee: 8,
+      expert: 3,
+      student: 4,
+      admin: 1,
 
-      ### Типы пользователей b2b направления. Добавил трехзначный код, чтобы избежать пересечений
-      b2b_hr: 100 # HR компании-клиента
+      b2b_hr: 100
     }
 
     enum gender: {
@@ -124,14 +118,12 @@ module Legacy
       mobile: "mobile"
     }
 
-    # NOTE: AASM for active below
     enum active: {
       inactive: 0,
       active: 1,
       pd_deleted: 2,
     }
 
-    # https://github.com/activerecord-hackery/ransack/wiki/Using-Ransackers#4-convert-an-integer-database-field-to-a-string-in-order-to-be-able-to-use-a-cont-predicate-instead-of-the-usual-eq-which-works-out-of-the-box-with-integers-to-find-all-records-where-an-integer-field-id-in-this-example-contains-an-input-string
     ransacker :searchable_id do
       Arel.sql("CONVERT(#{table_name}.id, CHAR(8))")
     end
@@ -314,8 +306,6 @@ module Legacy
     scope :delete_requested, -> { where.not(delete_requested_at: nil) }
     scope :requested_deletion_older_than, ->(days) { where("delete_requested_at <= ?", days.days.ago) }
 
-    # Сортировка по ФИО, с учетом того, что юзеры с пустыми ФИО должны быть последними в списке
-    # Ах, если бы был POSTGRES, могли бы делать NULLS LAST и не знали бы горя
     scope :ordered_by_fio_with_nulls_last, -> do
       order(
         "ISNULL(name2)", "name2",
@@ -401,8 +391,6 @@ module Legacy
       self.auth_token_checksum = Auth::TokenChecksumService.regenerate_checksum if auth_token_checksum.nil?
     end
 
-    # Переопределяем умолчание, т.к. в MySQL encrypted_password пишут в password колонку
-    # Не можем вынести метод в модуль, т.к. подключается несколько модулей с таким методом
     def password
       read_attribute(:password)
     end
@@ -432,8 +420,6 @@ module Legacy
     end
 
     def snils=(value)
-      # Snils.new(nil) returns random snils value
-      # To prevent it we directly write nil value
       write_attribute(:snils, value.present? ? Snils.new(value).raw : nil)
     end
 
@@ -489,7 +475,6 @@ module Legacy
 
     def can_show_profile_to_user?(other_user)
       id == other_user.id ||
-        # Проверка для B2B (новая логика)
         (b2b_company.present? && b2b_company == other_user.b2b_company)
     end
 
@@ -501,9 +486,7 @@ module Legacy
       Legacy::UserAuthorizer
     end
 
-    # TODO: access for program with webinar type is not calculated correctly
     def have_access_to?(edu_object)
-      # Хак для проверки доступа к наборам Хелп-деска
       return true if edu_object.respond_to?(:help_center?) && edu_object.help_center?
 
       case edu_object
@@ -592,7 +575,6 @@ module Legacy
     end
 
     def has_permission?(action, name)
-      # => { directions: { read: true, change: true }, ... }
       @permissions ||=
         NewPermission.for_user(id)
           .pluck(:name, :action)

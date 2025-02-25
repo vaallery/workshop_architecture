@@ -8,7 +8,7 @@
 
 ## Где взять inpx-индекс или дамп?
 
-Загрузить пример inpx-индека можно по [ссылке](https://thinknetica.simdyanov.ru/archive.inpx). Ниже описываются rake-задача по развертыванию библиотеки книг из inpx-файла в базу данных приложения. Однако, на маках на ARM-архитектуре гем parallel работает не важно, поэтому можно ориентироваться на готовый [SQL-дамп](thinknetica.simdyanov.ru/development.sql.zip).
+Загрузить пример inpx-индека можно по [ссылке](https://drive.google.com/file/d/1_HaRCXqNngRX5CUmkxPkjrNBaFbE7iKQ/view?usp=sharing). Ниже описываются rake-задача по развертыванию библиотеки книг из inpx-файла в базу данных приложения. Однако, на маках на ARM-архитектуре гем parallel работает не важно, поэтому можно ориентироваться на готовый [SQL-дамп](https://drive.google.com/file/d/117DV_2fMGY4mEUqq41MuQTy7gNNGz6EF/view).
 
 ## Развертывание индекса
 

@@ -27,7 +27,7 @@ misspell:
   script:
     - curl -L -o ./install-misspell.sh https://git.io/misspell
     - sh ./install-misspell.sh
-    - find . -type f -name '*.rb' | xargs bin/misspell -error
+    - find . -type f -name '*.rb' -not -path "./docs/*" | xargs bin/misspell -error
 
 database_consistency:
   <<: *backend

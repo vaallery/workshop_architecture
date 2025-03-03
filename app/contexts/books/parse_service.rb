@@ -1,4 +1,4 @@
-class Books::Parse
+class Books::ParseService
   include Callable
   extend Dry::Initializer
 

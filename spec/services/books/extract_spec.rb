@@ -1,4 +1,4 @@
-RSpec.describe Books::Extract do
+RSpec.describe Books::ExtractService do
   subject(:operation) { described_class }
   let(:book) { create(:extract_book) }
 

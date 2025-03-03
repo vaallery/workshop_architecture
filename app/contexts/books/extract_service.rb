@@ -1,4 +1,4 @@
-class Books::Extract
+class Books::ExtractService
   include Callable
   extend Dry::Initializer
 

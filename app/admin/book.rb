@@ -43,7 +43,7 @@ ActiveAdmin.register Book do
   FIO_FIELDS = %i[first_name last_name middle_name]
 
   member_action :download, method: :post do
-    info = Books::Extract.call(id: params[:id])
+    info = Books::ExtractService.call(id: params[:id])
 
     send_file info[:tempfile], type: 'application/octet-stream', filename: info[:filename]
   end

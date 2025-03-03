@@ -1,4 +1,4 @@
-class Genres::Parse
+class Genres::ParseService
   include Callable
   extend Dry::Initializer
 

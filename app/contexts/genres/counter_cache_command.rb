@@ -1,16 +1,16 @@
-class Languages::CounterCache
+class Genres::CounterCacheCommand
   include Callable
 
   QUERY = <<~SQL
               UPDATE
-                languages AS l
+                genres AS g
               SET
                 books_count = (SELECT
                                  COUNT(*)
                                FROM
-                                 books AS b
+                                 books_genres AS bg
                                WHERE
-                                 b.language_id = l.id);
+                                 bg.genre_id = g.id);
           SQL
 
   def call

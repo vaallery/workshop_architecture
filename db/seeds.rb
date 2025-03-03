@@ -1,8 +1,8 @@
 if (File.exist? Settings.app.sql_dump_path)
   Seeds::SqlDumpLoad.call(filename: Settings.app.sql_dump_path)
-  Authors::CounterCache.call
-  Genres::CounterCache.call
-  Keywords::CounterCache.call
+  Authors::CounterCacheCommand.call
+  Genres::CounterCacheCommand.call
+  Keywords::CounterCacheCommand.call
 else
   Book.destroy_all
   Seeds::GenreLoad.call(filename: 'db/seeds/genres.yml')

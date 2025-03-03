@@ -1,16 +1,16 @@
-class Genres::CounterCache
+class Keywords::CounterCacheCommand
   include Callable
 
   QUERY = <<~SQL
               UPDATE
-                genres AS g
+                keywords AS k
               SET
                 books_count = (SELECT
                                  COUNT(*)
                                FROM
-                                 books_genres AS bg
+                                 books_keywords AS bk
                                WHERE
-                                 bg.genre_id = g.id);
+                                 bk.keyword_id = k.id);
           SQL
 
   def call

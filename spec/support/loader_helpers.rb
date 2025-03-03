@@ -17,7 +17,7 @@ module LoaderHelpers
 
     lines = File.readlines(path)
 
-    Books::Links.call(
+    Books::LinksService.call(
       books: lines,
       genres_map: Genre.pluck(:slug, :id).to_h,
       keywords_map: Keyword.pluck(:name, :id).to_h,
@@ -51,21 +51,21 @@ module LoaderHelpers
   end
 
   def load_folders(lines)
-    folders = Folders::Parse.call(books: lines)
+    folders = Folders::ParseService.call(books: lines)
     Folder.create(folders.map { |f| { name: f } })
   end
 
   def load_books(lines)
-    Books::Parse.call(books: lines)
+    Books::ParseService.call(books: lines)
   end
 
   def load_keywords(lines)
-    keywords = Keywords::Parse.call(books: lines)
+    keywords = Keywords::ParseService.call(books: lines)
     Keyword.import keywords.uniq.map { |name| Keyword.new(name: name) }
   end
 
   def load_authors(lines)
-    authors = Authors::Parse.call(books: lines)
+    authors = Authors::ParseService.call(books: lines)
     Author.import authors.flatten.uniq.map { |attr| Author.new(attr) }
   end
 end

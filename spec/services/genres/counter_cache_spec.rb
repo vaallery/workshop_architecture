@@ -1,4 +1,4 @@
-RSpec.describe Genres::CounterCache do
+RSpec.describe Genres::CounterCacheCommand do
   subject(:operation) { described_class }
 
   before { inp_full_load('spec/fixtures/fb2-ru-ok-sf.inp') }

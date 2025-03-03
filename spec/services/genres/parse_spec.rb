@@ -1,4 +1,4 @@
-RSpec.describe Genres::Parse do
+RSpec.describe Genres::ParseService do
   subject(:operation) { described_class }
 
   let(:filename) { 'spec/fixtures/fb2-ru-ok-sf.inp' }

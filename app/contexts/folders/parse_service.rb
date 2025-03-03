@@ -1,4 +1,4 @@
-class Folders::Parse
+class Folders::ParseService
   include Callable
   extend Dry::Initializer
 

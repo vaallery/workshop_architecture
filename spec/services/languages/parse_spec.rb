@@ -1,4 +1,4 @@
-RSpec.describe Languages::Parse do
+RSpec.describe Languages::ParseService do
   subject(:operation) { described_class }
 
   let(:filename) { 'spec/fixtures/fb2-ru-ok-sf.inp' }

@@ -1,16 +1,16 @@
-class Keywords::CounterCache
+class Authors::CounterCacheCommand
   include Callable
 
   QUERY = <<~SQL
               UPDATE
-                keywords AS k
+                authors AS a
               SET
                 books_count = (SELECT
                                  COUNT(*)
                                FROM
-                                 books_keywords AS bk
+                                 books_authors AS ba
                                WHERE
-                                 bk.keyword_id = k.id);
+                                 ba.author_id = a.id);
           SQL
 
   def call

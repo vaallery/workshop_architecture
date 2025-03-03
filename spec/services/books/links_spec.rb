@@ -1,4 +1,4 @@
-RSpec.describe Books::Links do
+RSpec.describe Books::LinksService do
   subject(:operation) { described_class }
 
   let(:books) { File.readlines('spec/fixtures/fb2-ru-ok-sf.inp') }

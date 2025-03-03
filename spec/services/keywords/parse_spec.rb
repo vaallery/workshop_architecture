@@ -1,4 +1,4 @@
-RSpec.describe Keywords::Parse do
+RSpec.describe Keywords::ParseService do
   subject(:operation) { described_class }
 
   let(:books) { File.readlines('spec/fixtures/fb2-ru-ok-sf.inp') }

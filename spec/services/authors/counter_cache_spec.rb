@@ -1,4 +1,4 @@
-RSpec.describe Authors::CounterCache do
+RSpec.describe Authors::CounterCacheCommand do
   subject(:operation) { described_class }
 
   let(:fio) { 'Алешкин,Тимофей,Владимирович' }

@@ -1,4 +1,4 @@
-class Languages::Parse
+class Languages::ParseService
   include Callable
   extend Dry::Initializer
 

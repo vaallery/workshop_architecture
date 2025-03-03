@@ -1,4 +1,4 @@
-class Keywords::Parse
+class Keywords::ParseService
   include Callable
   extend Dry::Initializer
 

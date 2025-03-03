@@ -1,4 +1,4 @@
-RSpec.describe Folders::Parse do
+RSpec.describe Folders::ParseService do
   subject(:operation) { described_class }
 
   let(:books) { File.readlines('spec/fixtures/fb2-ru-ok-sf.inp') }

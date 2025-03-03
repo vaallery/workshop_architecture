@@ -1,4 +1,4 @@
-class Books::Links
+class Books::LinksService
   include Callable
   extend Dry::Initializer
 

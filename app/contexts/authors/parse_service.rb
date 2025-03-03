@@ -1,4 +1,4 @@
-class Authors::Parse
+class Authors::ParseService
   include Callable
   extend Dry::Initializer
 

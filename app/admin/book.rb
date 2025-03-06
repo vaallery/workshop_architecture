@@ -19,19 +19,23 @@ ActiveAdmin.register Book do
          as: :select,
          label: I18n.t('active_admin.filters.genre'),
          collection: proc {
+          #ActiveRecord::Base.connected_to(role: :reading, prevent_writes: true) do
            # TODO query + декоратор
            Genre.order(:name)
                 .pluck(:name, :id)
                 .map { |g| [ truncate(g.first, length: 25), g.last ] }
+          #end
          }
   filter :keywords_id_eq,
          as: :select,
          label: I18n.t('active_admin.filters.keyword'),
          collection: proc {
+          #ActiveRecord::Base.connected_to(role: :reading, prevent_writes: true) do
            # TODO query + декоратор
            Keyword.order(:name)
                   .pluck(:name, :id)
                   .map { |k| [ truncate(k.first, length: 25), k.last ] }
+          #end
          }
 
   controller do

@@ -32,6 +32,12 @@ module Library
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
     # config.eager_load_paths << Rails.root.join('extras')
+    config.cache_store = :redis_cache_store, { url: ENV['REDIS_CACHE_URL'] }
+    # config.session_store :redis_store,
+    #   servers: [ENV['REDIS_SESSION_URL']],
+    #   expire_after: 90.minutes,
+    #   key: '_library_session',
+    #   threadsafe: false
 
     config.generators do |g|
       g.org             :active_record

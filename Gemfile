@@ -5,6 +5,7 @@ gem 'puma', '>= 6.5.0'
 
 # Базы данных
 gem 'pg'
+gem 'redis-actionpack' # hiredes
 
 # Многопоточное выполнение
 gem 'parallel'

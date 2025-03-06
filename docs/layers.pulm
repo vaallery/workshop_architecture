@@ -1,0 +1,7 @@
+@startuml
+Router -down->[use] Controller
+Controller -down->[use] Command
+Controller -down->[use] Model
+Command -down->[use] Model
+Controller -down->[use] Serializer
+@enduml

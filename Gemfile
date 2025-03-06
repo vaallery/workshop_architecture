@@ -14,6 +14,9 @@ gem 'activerecord-import'
 gem 'sprockets-rails'
 gem 'slim-rails'
 
+# Serializers
+gem 'alba'
+
 # Распаковка архивов
 gem 'rubyzip', require: 'zip'
 

@@ -5,10 +5,10 @@ default: &default
   prepared_statements: false
 
 postgre: &postgre
-  host: <%= ENV.fetch('POSTGRES_HOST', 'localhost') %>
+  host: <%= ENV.fetch('POSTGRES_HOST', '127.0.0.1') %>
   port: <%= ENV.fetch('POSTGRES_PORT', '5432') %>
-  username: <%= ENV.fetch('POSTGRES_USER') { 'igorsimdyanov' } %>
-  password: <%= ENV.fetch('POSTGRES_PASSWORD') { '' } %>
+  username: <%= ENV.fetch('POSTGRES_USER') { 'admin' } %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'admin' } %>
 
 development:
   <<: *default
@@ -17,6 +17,7 @@ development:
 
 test:
   <<: *default
+  <<: *postgre
   database: library_test
 
 production:

@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get 'up' => 'rails/health#show', as: :rails_health_check
 
+  get "books/(:page)" => 'books#index', page: /\d+/
+  # resources :books, only: :index - Я бы предпочел маршруты строить ближе к REST, а номер страницы передавать в query параметрах, например /books?page=2&per_page=100
+
   # Render dynamic PWA files from app/views/pwa/*
   get 'service-worker' => 'rails/pwa#service_worker', as: :pwa_service_worker
   get 'manifest' => 'rails/pwa#manifest', as: :pwa_manifest

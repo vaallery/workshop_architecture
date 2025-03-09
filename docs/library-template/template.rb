@@ -30,12 +30,9 @@ class ::RailsTemplate < Thor::Group
     copy_file 'app/models/concerns/ransackable.rb'
   end
 
-  def copy_ci_config
+  def configure_configs
     copy_file '.rubocop.yml', force: true
     copy_file '.rspec'
-  end
-
-  def configure_configs
     copy_file 'config/initializers/config.rb'
     copy_file 'config/initializers/active_admin.rb'
     copy_file 'config/initializers/sneakers.rb'
@@ -45,11 +42,14 @@ class ::RailsTemplate < Thor::Group
     copy_file 'config/locales/ru.active_admin.yml', force: true
   end
 
+  def configure_controllers
+    copy_file 'app/controllers/application_controller.rb', force: true
+  end
+
   def configure_gemfile
     remove_file 'Gemfile'
     template 'Gemfile.erb', 'Gemfile'
-    remove_file 'Rakefile'
-    copy_file 'Rakefile'
+    copy_file 'Rakefile', force: true
   end
 
   def configure_rabbit_mq

@@ -39,7 +39,7 @@ docker compose bundle exec -it server bundle exec rails c
 ## План работ
 
 * регистрация kafka-сообщений в модели EventsMessage
-* сервис-объект на отправку сообщенийи
+* сервис-объект на отправку сообщений
 * сервис-объект на регистрацию сообщений
 * кнопка в active_admin на отправку уведомлений
 * нужно подружить karafka с ActiveJob

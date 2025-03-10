@@ -29,6 +29,10 @@ gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'devise'
 
+# Взаимодействие с микросервисами
+gem 'httparty'
+gem 'bunny'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'capybara'

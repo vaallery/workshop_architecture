@@ -6,6 +6,21 @@ services:
       POSTGRES_PASSWORD: 'postgres'
     volumes:
       - db:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: elasticsearch:8.17.3
+    container_name: elastic
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=admin
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
   web:
     tty: true
     stdin_open: true
@@ -35,3 +50,5 @@ services:
       POSTGRES_PASSWORD: 'postgres'
 volumes:
   db:
+  es-data:  # Определение тома
+    driver: local

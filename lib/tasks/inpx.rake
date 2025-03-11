@@ -1,4 +1,9 @@
 namespace :inpx do
+  desc 'Перестроить поисковый индекс в эластике'
+  task :reindex => :environment do
+    Book.reindex
+  end
+
   desc 'Извлекаем содержимое inpx-файла'
   task :ls, [ :path ] => [ :environment ] do |task, args|
     args.with_defaults(path: ENV.fetch('INPX_PATH', 'db/data/archive.inpx'))

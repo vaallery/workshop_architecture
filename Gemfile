@@ -17,6 +17,10 @@ gem 'slim-rails'
 # Serializers
 gem 'alba'
 
+# Elastic
+gem "elasticsearch"
+gem "searchkick"
+
 # Распаковка архивов
 gem 'rubyzip', require: 'zip'
 

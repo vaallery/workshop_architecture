@@ -1,5 +1,6 @@
 class Book < ApplicationRecord
   include Ransackable
+  searchkick settings: { number_of_shards: 1 }, index_name: 'books'
 
   has_many :books_authors, dependent: :destroy
   has_many :authors, through: :books_authors

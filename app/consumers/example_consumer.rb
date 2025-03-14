@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Example consumer that prints messages payloads
-class ExampleConsumer < ApplicationConsumer
+class ExampleConsumer < KafkaConsumer
   def consume
     messages.each { |message| puts message.payload }
   end

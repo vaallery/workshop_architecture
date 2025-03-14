@@ -21,6 +21,33 @@ services:
     volumes:
       - es-data:/usr/share/elasticsearch/data
 
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    container_name: redpanda_dev
+    command:
+      - redpanda start
+      - --smp 1
+      - --memory 1G
+      - --overprovisioned
+      - --node-id 1
+      - --check=false
+      - --advertise-kafka-addr 127.0.0.1:9092
+    ports: ["9092:9092"]
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+    environment:
+      - REDPANDA_ENVIRONMENT=development
+
+  console:
+    image: docker.redpanda.com/redpandadata/console:latest
+    container_name: redpanda_console_dev
+    ports: ["8080:8080"]
+    environment:
+      - KAFKA_BROKERS=127.0.0.1:9092
+    depends_on:
+      - redpanda
+
+
   web:
     tty: true
     stdin_open: true
@@ -50,5 +77,6 @@ services:
       POSTGRES_PASSWORD: 'postgres'
 volumes:
   db:
+  redpanda_data:
   es-data:  # Определение тома
     driver: local

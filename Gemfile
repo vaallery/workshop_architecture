@@ -39,6 +39,7 @@ gem 'devise'
 # Взаимодействие с микросервисами
 gem 'httparty'
 gem 'bunny'
+gem 'karafka'
 
 group :development, :test do
   gem 'bundler-audit'
